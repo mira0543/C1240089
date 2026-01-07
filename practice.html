@@ -1,0 +1,137 @@
+<!-- Faaduma Abdullahi Hassan  ID:C1240089 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="menue">
+        <li>JavaScript</li>
+        <li >Arabic</li>
+        <li >Python</li>
+        
+    </ul> 
+    <div class="text">
+        <h1 id="ca">Heading one.</h1>
+        <h2>Heading two.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing?</p>
+        <p id="tx">Lorem ipsum dolor sit amet consectetur adipisicing?</p>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing?</p>       
+    </div>
+    <input type="text"  placeholder="class" name="Ca242" id="input">
+    <script>
+        //select element
+        let inputbox = document.getElementById("input")
+        console.log(inputbox.getAttribute("placeholder"));
+        //set atteibute=> add new attribute
+        inputbox.setAttribute("class","Ca242")
+
+        //traversing through elements
+        let div = document.querySelector(".text");
+        console.log(div.lastElementChild);
+        //accessing children to the parent  Node
+        let tx = document.getElementById("tx");
+        console.log(tx.parentNode);
+        //prevoius sibling
+        console.log(tx.previousElementSibling);
+        //next sibling
+        console.log(tx.nextElementSibling);
+          //accessing HTML element  content?
+        let txt = document.getElementById("tx").innerHTML;
+        console.log(txt);
+        //qaabka labaad
+        let tx1 = document.getElementById("tx");
+        console.log(tx1.textContent);
+        //ama
+        console.log(tx.innerText);
+        //text content = waxay so bandhigtaa textiga html oodhan
+        let par = document.querySelector(".text");
+        console.log(par.textContent);
+        //while inner text displays only visible text in the web page
+        console.log(par.innerText);
+        //changing HTML content
+        let change = document.getElementById("ca");
+        change.innerHTML = "<h1>Heading one.</h1>";
+        //or you can use if you want to change the text only
+        change.textContent = "new text"
+        
+        //selecting an element
+        let inputbox1 = document.getElementById("input");
+        //get attribute => display or access attribute value
+        console.log(inputbox1.getAttribute("placeholder"));
+        //set attribute => add new attribute
+        inputbox1.setAttribute("class","ca242")
+        console.log(inputbox1);
+        //checking if attribute exists or not
+        console.log(inputbox1.hasAttribute("placeholder"));
+        //Remove an attribute using remove method
+        inputbox1.removeAttribute("placeholder")
+        console.log(inputbox1);
+        //Create an element method
+        let newel = document.createElement("div");
+        //add paragraph inside the element
+        newel.innerHTML = "<p> this the new element content</p>"
+        //make visible to the web page
+        document.body.appendChild(newel)
+        //modify the property of the element using style
+        newel.style.color = "green"
+        //display in the console
+        console.log(newel);
+        //select the element
+        let menu = document.querySelector(".menue");
+        //create new element
+        let list = document.createElement("li");
+        //new element value
+        list.innerHTML= "<li>Calculas</li>"
+        //add the new element in the previous list
+        menu.appendChild(list)
+        // let list1 = document.createElement("li")
+        // list1.innerHTML="<li>somali</li>"
+        // menu.appendChild(list1)
+        //another option you can use InsertAdjacenElement method with four different position
+        menu.insertAdjacentElement("afterbegin",list)
+        //selecting element
+        let oldpara = document.getElementById("tx");
+        let newpara = document.createElement("p")
+        newpara.textContent ="This one is a new paragraph."
+        //replacing element using replace method.
+        oldpara.parentNode.replaceChild(newpara,oldpara);
+        //removing an element
+        let re = document.getElementById("ca").remove();//qaabka 1aad.
+        re.remove();//qaabka 2aad
+
+
+
+
+
+
+
+
+
+
+        // //how to remove an element
+        // let re = document.getElementById("tx").remove();
+        // //another option
+        // // re.remove();
+        // //selecting an element
+        // let oldpara = document.getElementById("tx");
+        // //create the new element
+        // let newpara = document.createElement("p");
+        // //create a content to the new paragraph
+        // newpara.innerHTML= "THis is the new text";
+        // //repalacing the element using replace method
+        // document.parentNode.replaceChild(newpara,oldpara)
+        // // another option if child element has parent do this
+        // oldpara.parentNode.replaceChild(newpara,oldpara)
+
+
+
+    </script>
+
+
+ 
+</body>
+</html>
+
